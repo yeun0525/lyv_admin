@@ -1,0 +1,403 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+		/>
+		<title>content</title>
+		<link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+		<script src="../assets/js/jquery-3.7.1.min.js"></script>
+		<script src="../assets/js/design.js"></script>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<header>
+				<h1>LYV sciences</h1>
+			</header>
+
+			<div class="container">
+				<nav class="lnb">
+					<div class="depth2 active">
+						<button type="button" class="depth1__btn">
+							<span>메인 관리</span>
+						</button>
+						<div class="depth2__box">
+							<a href="" class="depth2__btn on">배너 관리</a>
+							<a href="" class="depth2__btn">뉴스 관리</a>
+						</div>
+					</div>
+					<div class="depth2">
+						<button type="button" class="depth1__btn">
+							<span>상품 관리</span>
+						</button>
+						<div class="depth2__box">
+							<a href="" class="depth2__btn"></a>
+							<a href="" class="depth2__btn"></a>
+						</div>
+					</div>
+					<div class="depth2">
+						<button type="button" class="depth1__btn">
+							<span>공지 관리</span>
+						</button>
+						<div class="depth2__box">
+							<a href="" class="depth2__btn"></a>
+							<a href="" class="depth2__btn"></a>
+						</div>
+					</div>
+					<div class="depth2">
+						<button type="button" class="depth1__btn">
+							<span>미디어 관리</span>
+						</button>
+						<div class="depth2__box">
+							<a href="" class="depth2__btn"></a>
+							<a href="" class="depth2__btn"></a>
+						</div>
+					</div>
+					<div class="depth2">
+						<button type="button" class="depth1__btn">
+							<span>팝업 관리</span>
+						</button>
+						<div class="depth2__box">
+							<a href="" class="depth2__btn"></a>
+							<a href="" class="depth2__btn"></a>
+						</div>
+					</div>
+				</nav>
+
+				<div class="content">
+					<p class="content__title">배너 관리</p>
+
+					<div class="forms__table">
+						<table>
+							<colgroup>
+								<col style="width: 120px" />
+								<col style="width: auto" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>
+										배너명 (국문)
+										<span class="required">*</span>
+									</th>
+									<td>
+										<input
+											type="text"
+											class="forms__text"
+											placeholder=""
+										/>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										노출 기간
+										<span class="required">*</span>
+									</th>
+									<td>
+										<div class="forms__date">
+											<input
+												type="date"
+												value="2026-05-26"
+											/>
+											<p>~</p>
+											<input
+												type="date"
+												value="2026-05-26"
+											/>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table>
+							<colgroup>
+								<col style="width: 120px" />
+								<col style="width: auto" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>기본 레이아웃</th>
+									<td>
+										<div class="forms__group">
+											<label
+												for="radTmp1"
+												class="forms-radio"
+											>
+												<input
+													type="radio"
+													id="radTmp1"
+													name="radTmp"
+												/>
+												<span
+													class="forms-radio__icon"
+												></span>
+												<span class="forms-radio__text"
+													>이미지</span
+												>
+											</label>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<label class="required"
+											>PC 콘텐츠</label
+										>
+									</th>
+									<td>
+										<div class="file-upload">
+											<input
+												type="text"
+												class="input-text readonly"
+												readonly
+												placeholder="파일 첨부"
+											/>
+											<button
+												type="button"
+												class="btn-search"
+											>
+												파일찾기
+											</button>
+										</div>
+										<p class="form-desc">
+											* 이미지 규격: 1920×990px / 5M 이하
+											/ jpg, jpeg, png
+										</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<table>
+							<colgroup>
+								<col style="width: 120px" />
+								<col style="width: auto" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>
+										<label class="required"
+											>Mobile 콘텐츠</label
+										>
+									</th>
+									<td>
+										<div class="file-upload">
+											<input
+												type="text"
+												class="input-text readonly"
+												readonly
+												placeholder="파일 첨부"
+											/>
+											<button
+												type="button"
+												class="btn-search"
+											>
+												파일찾기
+											</button>
+										</div>
+										<p class="form-desc">
+											* 이미지 규격: 720×1364px / 5M 이하
+											/ jpg, jpeg, png
+										</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<table>
+							<colgroup>
+								<col style="width: 120px" />
+								<col style="width: auto" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>
+										<label class="required"
+											>노출 기간</label
+										>
+									</th>
+									<td>
+										<div class="date-group">
+											<input
+												type="date"
+												class="input-date"
+												value="2026-05-26"
+											/>
+											<span class="hyphen">~</span>
+											<input
+												type="date"
+												class="input-date"
+												value="9999-12-31"
+											/>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th><label>기본 레이아웃</label></th>
+									<td>
+										<div class="input-group">
+											<label class="radio"
+												><input
+													type="radio"
+													name="layout"
+												/>
+												적용 안함</label
+											>
+											<label class="radio"
+												><input
+													type="radio"
+													name="layout"
+													checked
+												/>
+												적용</label
+											>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										<label class="required"
+											>배너명 (영문)</label
+										>
+									</th>
+									<td>
+										<select class="select-box">
+											<option>메뉴 구성 선택</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th><label>미리보기</label></th>
+									<td>
+										<div class="preview-box">
+											<div class="preview-img"></div>
+											<button
+												type="button"
+												class="btn-delete"
+												title="삭제"
+											>
+												×
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th><label>미리보기</label></th>
+									<td>
+										<div class="preview-box">
+											<div class="preview-img"></div>
+											<button
+												type="button"
+												class="btn-delete"
+												title="삭제"
+											>
+												×
+											</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<table class="table">
+						<colgroup>
+							<col style="min-width: 120px; width: 7.32%" />
+							<col style="width: 46.34%" />
+							<col style="min-width: 140px; width: 8.54%" />
+							<col style="min-width: 160px; width: 9.76%" />
+							<col style="min-width: 160px; width: 9.76%" />
+							<col style="min-width: 160px; width: 9.76%" />
+							<col style="min-width: 140px; width: 8.54%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>노출 순서</th>
+								<th>배너명</th>
+								<th>유형</th>
+								<th>노출 시작일</th>
+								<th>노출 종료일</th>
+								<th>등록일</th>
+								<th>순서 변경</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td class="text-left">홍보 영상</td>
+								<td>영상</td>
+								<td>YYYY.MM.DD</td>
+								<td>YYYY.MM.DD</td>
+								<td>YYYY.MM.DD</td>
+								<td>
+									<div class="table__flex">
+										<button
+											type="button"
+											class="table__arrow"
+										></button>
+										<button
+											type="button"
+											class="table__arrow down"
+										></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="content__footer">
+						<div class="footer__left"></div>
+						<div class="footer__center">
+							<div class="pagination">
+								<button type="button" class="button is--first">
+									처음
+								</button>
+								<button type="button" class="button is--prev">
+									이전
+								</button>
+								<div class="pagination__pages">
+									<button type="button" class="num active">
+										1
+									</button>
+									<button type="button" class="num">2</button>
+									<button type="button" class="num">3</button>
+									<button type="button" class="num">4</button>
+									<button type="button" class="num">5</button>
+									<button type="button" class="num">6</button>
+									<button type="button" class="num">7</button>
+									<button type="button" class="num">8</button>
+									<button type="button" class="num">9</button>
+									<button type="button" class="num">
+										10
+									</button>
+								</div>
+								<button type="button" class="button is--next">
+									다음
+								</button>
+								<button type="button" class="button is--last">
+									마지막
+								</button>
+							</div>
+						</div>
+						<div class="footer__right">
+							<button type="button" class="button is--black">
+								등록
+							</button>
+							<button type="button" class="button is--gray">
+								취소
+							</button>
+							<button
+								type="button"
+								class="button is--white size--s"
+							>
+								파일찾기
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

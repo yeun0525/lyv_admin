@@ -76,3 +76,70 @@
 		@return $url;
 	}
 }
+
+// SCROLL
+@mixin scroll($type) {
+	// scrollbar-gutter: stable both-edges;
+	&::-webkit-scrollbar,
+	&::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	&::-webkit-scrollbar-button:start:decrement,
+	&::-webkit-scrollbar-button:end:increment {
+		display: block;
+		width: 0;
+		height: 0;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border: $scY solid rgba(0, 0, 0, 0);
+		background-clip: padding-box;
+		background-color: $hexScbDefault;
+		border-radius: $scY * 10;
+		cursor: default;
+	}
+
+	@if $type == all {
+		overflow: auto;
+
+		&::-webkit-scrollbar,
+		&::-webkit-scrollbar-track {
+			&:horizontal {
+				height: $scY * 3;
+			}
+			&:vertical {
+				width: $scY * 3;
+			}
+		}
+		&::-webkit-scrollbar-thumb {
+			&:horizontal {
+				height: $scY;
+			}
+			&:vertical {
+				width: $scY;
+			}
+		}
+	}
+	@if $type == x {
+		overflow-x: scroll;
+		overflow-y: hidden;
+		&::-webkit-scrollbar,
+		&::-webkit-scrollbar-track {
+			height: $scY * 3;
+		}
+		&::-webkit-scrollbar-thumb {
+			height: $scY;
+		}
+	}
+	@if $type == y {
+		overflow-x: hidden;
+		overflow-y: scroll;
+		&::-webkit-scrollbar,
+		&::-webkit-scrollbar-track {
+			width: $scY * 3;
+		}
+		&::-webkit-scrollbar-thumb {
+			width: $scY;
+		}
+	}
+}

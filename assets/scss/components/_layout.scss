@@ -1,5 +1,11 @@
 @use '../utils/' as *;
 
+.container {
+	@include set-flex($a: flex-start);
+	@include scroll(x);
+	min-width: 1280px;
+}
+
 $headerH: 74px;
 
 header {
@@ -18,11 +24,11 @@ header {
 	}
 }
 
-.lnb__area {
+.lnb {
 	$dep1: '.depth1';
 	$dep2: '.depth2';
 
-	width: 240px;
+	width: $lnbW;
 	height: calc(100vh - $headerH);
 	padding: 30px 20px;
 	border-right: 1px solid $hexBorder;
