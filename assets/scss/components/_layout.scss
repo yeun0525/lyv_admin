@@ -1,0 +1,84 @@
+@use '../utils/' as *;
+
+$headerH: 74px;
+
+header {
+	@include set-flex($a: center);
+	width: 100%;
+	height: $headerH;
+	padding: 0 20px;
+	border-bottom: 1px solid $hexBorder;
+	background-color: $hexWhite;
+	h1 {
+		@include reset(bg);
+		width: 137px;
+		height: 27px;
+		background-image: url(url-img(header, logo, $value: png));
+		font-size: 0;
+	}
+}
+
+.lnb__area {
+	$dep1: '.depth1';
+	$dep2: '.depth2';
+
+	width: 240px;
+	height: calc(100vh - $headerH);
+	padding: 30px 20px;
+	border-right: 1px solid $hexBorder;
+	background-color: $hexWhite;
+
+	#{$dep1} {
+		&__btn {
+			@include set-flex($a: center, $j: space-between);
+			width: 100%;
+			padding: 15px 14px;
+			border-bottom: 1px solid $hexBorder;
+			color: $hexBlack;
+			font-weight: $fwR;
+			font-size: 16px;
+			&::after {
+				@include reset(pseudo);
+				@include reset(icon);
+				$s: 18px;
+				width: $s;
+				height: $s;
+				background-image: url(url-img(header, arrow));
+			}
+		}
+	}
+	#{$dep2} {
+		width: 100%;
+		&__box {
+			@include set-flex($dir: column);
+			display: none;
+			padding-left: 14px;
+		}
+		&__btn {
+			padding: 16px 14px;
+			border-bottom: 1px solid $hexBorder;
+			color: $hexBlack;
+			font-weight: $fwR;
+			font-size: 16px;
+
+			&.on {
+				border-bottom: 2px solid $hex0;
+				color: $hex0;
+				font-weight: $fwB;
+			}
+		}
+
+		&.active {
+			#{$dep1}__btn {
+				background-color: $hex0;
+				color: $hexWhite;
+				&::after {
+					background-image: url(url-img(header, arrow, white));
+				}
+			}
+			#{$dep2}__box {
+				display: flex;
+			}
+		}
+	}
+}
