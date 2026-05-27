@@ -46,9 +46,9 @@
 			font-size: 16px;
 			line-height: 16px;
 			text-align: center;
-			&.text-left {
-				text-align: left;
-			}
+		}
+		.text-left {
+			text-align: left;
 		}
 		&__arrow {
 			@include reset(icon);
@@ -155,13 +155,14 @@
 
 .forms {
 	&__table {
+		$maTop: 40px;
+
 		width: 100%;
 		table {
 			display: block;
 			width: 100%;
-			// border-collapse: collapse;
 			& + table {
-				margin-top: 40px;
+				margin-top: $maTop;
 			}
 		}
 		tbody {
@@ -183,6 +184,21 @@
 		td {
 			width: 100%;
 		}
+		& + &.forms__table {
+			margin-top: $maTop;
+		}
+		&.is--full {
+			tbody {
+				grid-template-columns: 1fr;
+			}
+			tr + tr {
+				margin-top: $maTop;
+			}
+		}
+	}
+	&__group {
+		@include set-flex($a: center);
+		gap: 40px;
 	}
 	&__text {
 		width: 100%;
@@ -202,5 +218,196 @@
 			border: 1px solid $hexBorder;
 			border-radius: 6px;
 		}
+	}
+	&__radio {
+		$s: 20px;
+		$dot: 10px;
+		$el: '.forms__radio';
+
+		@include set-flex($a: center);
+		gap: 8px;
+		position: relative;
+		input {
+			&[type='radio'] {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				z-index: 10;
+			}
+			&:checked {
+				& + #{$el}--icon {
+					border-color: $hexBlue;
+					&::before {
+						@include reset(pseudo);
+						background-color: $hexBlue;
+						width: $dot;
+						height: $dot;
+						border-radius: $dot;
+					}
+				}
+			}
+			&:disabled {
+				& + #{$el}--icon,
+				& ~ #{$el}--text {
+					opacity: 0.4;
+				}
+			}
+		}
+		&--icon {
+			@include set-flex($a: center, $j: center);
+			@include set-flex($f: true);
+			width: $s;
+			height: $s;
+			border: 1px solid $hexBorder;
+			border-radius: $s;
+			background-color: $hexWhite;
+		}
+		&--text {
+			width: 72px;
+		}
+	}
+	&__select {
+		$el: '.forms__select';
+
+		position: relative;
+		width: 100%;
+		height: 40px;
+		&--input {
+			display: none;
+			&:checked {
+				+ #{$el}--label {
+					&::after {
+						background-image: url(url-img(icon, arrow-up, black));
+					}
+				}
+				~ #{$el}--menu {
+					display: block;
+				}
+			}
+		}
+		&--label {
+			@include set-flex($a: center, $j: space-between);
+			width: 100%;
+			height: 100%;
+			padding: 0 12px;
+			border: 1px solid $hexBorder;
+			border-radius: 6px;
+			color: $hexBlack;
+			font-weight: $fwR;
+			font-size: 14px;
+			cursor: pointer;
+			user-select: none;
+
+			&::after {
+				$s: 16px;
+				@include reset(pseudo);
+				width: $s;
+				height: $s;
+				background-image: url(url-img(icon, arrow, black));
+			}
+		}
+		// TODO 영은: 디자인 나오면 작업 필요
+		&--menu {
+			display: none;
+			position: absolute;
+			top: 44px;
+			left: 0;
+			width: 100%;
+			max-height: 200px;
+			overflow-y: auto;
+			background-color: #fff;
+			border: 1px solid #e5e5e5;
+			border-radius: 4px;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+			z-index: 10;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+
+			div {
+				button {
+					width: 100%;
+					padding: 10px 12px;
+					text-align: left;
+					background: none;
+					border: none;
+					font-size: 14px;
+					color: #333;
+					cursor: pointer;
+
+					&:hover {
+						background-color: #f5f5f5;
+					}
+				}
+			}
+		}
+	}
+	&__file {
+		@include set-flex($a: center);
+		gap: 12px;
+		&--list {
+			@include set-flex($a: center);
+			gap: 41px;
+			margin-top: 14px;
+		}
+		&--item {
+			@include set-flex($a: center);
+			gap: 10px;
+			.delete {
+				$s: 10px;
+				@include reset(icon);
+				width: $s;
+				height: $s;
+				background-image: url(url-img(icon, close, black));
+			}
+		}
+	}
+	&__desc {
+		margin-top: 14px;
+		color: $hex9;
+		font-weight: $fwR;
+		font-size: 14px;
+		line-height: 14px;
+	}
+	&__preview {
+		@include set-flex($a: flex-start);
+		gap: 20px;
+		&--img {
+			width: 300px;
+			height: 200px;
+			background-color: $hexLightGray;
+		}
+		&--delete {
+			$s: 20px;
+			@include reset(icon);
+			width: $s;
+			height: $s;
+			background-image: url(url-img(icon, close, black));
+		}
+	}
+	&__place {
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
+	&__url {
+		@include set-flex($a: center);
+		gap: 10px;
+		p {
+			color: $hexBlack;
+			font-weight: $fwR;
+			font-size: 16px;
+			line-height: 16px;
+		}
+	}
+	&__editor {
+		width: 100%;
+		height: 400px;
+		border: 1px solid $hexBorder;
+		border-radius: 6px;
 	}
 }

@@ -124,7 +124,7 @@
 										<div class="forms__group">
 											<label
 												for="radTmp1"
-												class="forms-radio"
+												class="forms__radio"
 											>
 												<input
 													type="radio"
@@ -132,9 +132,25 @@
 													name="radTmp"
 												/>
 												<span
-													class="forms-radio__icon"
+													class="forms__radio--icon"
 												></span>
-												<span class="forms-radio__text"
+												<span class="forms__radio--text"
+													>이미지</span
+												>
+											</label>
+											<label
+												for="radTmp2"
+												class="forms__radio"
+											>
+												<input
+													type="radio"
+													id="radTmp2"
+													name="radTmp"
+												/>
+												<span
+													class="forms__radio--icon"
+												></span>
+												<span class="forms__radio--text"
 													>이미지</span
 												>
 											</label>
@@ -143,29 +159,41 @@
 								</tr>
 								<tr>
 									<th>
-										<label class="required"
-											>PC 콘텐츠</label
+										배너명 (영문)<span class="required"
+											>*</span
 										>
 									</th>
 									<td>
-										<div class="file-upload">
+										<div class="forms__select">
 											<input
-												type="text"
-												class="input-text readonly"
-												readonly
-												placeholder="파일 첨부"
+												type="checkbox"
+												id="select-input"
+												class="forms__select--input"
 											/>
-											<button
-												type="button"
-												class="btn-search"
+											<label
+												for="select-input"
+												class="forms__select--label"
 											>
-												파일찾기
-											</button>
+												메뉴 구성 선택
+											</label>
+											<div class="forms__select--menu">
+												<div>
+													<button type="button">
+														메뉴 1
+													</button>
+												</div>
+												<div>
+													<button type="button">
+														메뉴 2
+													</button>
+												</div>
+												<div>
+													<button type="button">
+														메뉴 3
+													</button>
+												</div>
+											</div>
 										</div>
-										<p class="form-desc">
-											* 이미지 규격: 1920×990px / 5M 이하
-											/ jpg, jpeg, png
-										</p>
 									</td>
 								</tr>
 							</tbody>
@@ -178,34 +206,60 @@
 							<tbody>
 								<tr>
 									<th>
-										<label class="required"
-											>Mobile 콘텐츠</label
-										>
+										PC 콘텐츠<span class="required">*</span>
 									</th>
 									<td>
-										<div class="file-upload">
+										<div class="forms__file">
 											<input
 												type="text"
-												class="input-text readonly"
-												readonly
-												placeholder="파일 첨부"
+												class="forms__text"
+												placeholder=""
 											/>
 											<button
 												type="button"
-												class="btn-search"
+												class="button is--white size--s"
 											>
 												파일찾기
 											</button>
 										</div>
-										<p class="form-desc">
-											* 이미지 규격: 720×1364px / 5M 이하
+										<div class="forms__file--list">
+											<div class="forms__file--item">
+												<p>Test 공고.pdf</p>
+												<button
+													type="button"
+													class="delete"
+												></button>
+											</div>
+											<div class="forms__file--item">
+												<p>Test 공고.pdf</p>
+												<button
+													type="button"
+													class="delete"
+												></button>
+											</div>
+										</div>
+										<p class="forms__desc">
+											* 이미지 규격: 720x1364px / 5M 이하
 											/ jpg, jpeg, png
 										</p>
 									</td>
 								</tr>
+								<tr>
+									<th>미리보기</th>
+									<td>
+										<div class="forms__preview">
+											<div
+												class="forms__preview--img"
+											></div>
+											<button
+												type="button"
+												class="forms__preview--delete"
+											></button>
+										</div>
+									</td>
+								</tr>
 							</tbody>
 						</table>
-
 						<table>
 							<colgroup>
 								<col style="width: 120px" />
@@ -213,99 +267,61 @@
 							</colgroup>
 							<tbody>
 								<tr>
-									<th>
-										<label class="required"
-											>노출 기간</label
-										>
-									</th>
+									<th>위치</th>
 									<td>
-										<div class="date-group">
-											<input
-												type="date"
-												class="input-date"
-												value="2026-05-26"
+										<div class="forms__place">
+											<img
+												src="../assets/image/img/forms-place-1.jpg"
+												alt=""
 											/>
-											<span class="hyphen">~</span>
-											<input
-												type="date"
-												class="input-date"
-												value="9999-12-31"
-											/>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th><label>기본 레이아웃</label></th>
-									<td>
-										<div class="input-group">
-											<label class="radio"
-												><input
-													type="radio"
-													name="layout"
-												/>
-												적용 안함</label
-											>
-											<label class="radio"
-												><input
-													type="radio"
-													name="layout"
-													checked
-												/>
-												적용</label
-											>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th>
-										<label class="required"
-											>배너명 (영문)</label
-										>
-									</th>
-									<td>
-										<select class="select-box">
-											<option>메뉴 구성 선택</option>
-										</select>
-									</td>
-								</tr>
-								<tr>
-									<th><label>미리보기</label></th>
-									<td>
-										<div class="preview-box">
-											<div class="preview-img"></div>
-											<button
-												type="button"
-												class="btn-delete"
-												title="삭제"
-											>
-												×
-											</button>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<th><label>미리보기</label></th>
-									<td>
-										<div class="preview-box">
-											<div class="preview-img"></div>
-											<button
-												type="button"
-												class="btn-delete"
-												title="삭제"
-											>
-												×
-											</button>
 										</div>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-
+					<div class="forms__table is--full">
+						<table>
+							<colgroup>
+								<col style="width: 120px" />
+								<col style="width: auto" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th>
+										URL
+										<span class="required">*</span>
+									</th>
+									<td>
+										<div class="forms__url">
+											<p>
+												https://www.lyvsciences.com/products/
+											</p>
+											<input
+												type="text"
+												class="forms__text"
+												placeholder=""
+											/>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th>
+										내용(국문)
+										<span class="required">*</span>
+									</th>
+									<td>
+										<div class="forms__editor"></div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<!-- table -->
 					<table class="table">
 						<colgroup>
 							<col style="min-width: 120px; width: 7.32%" />
-							<col style="width: 46.34%" />
+							<col style="width: auto" />
 							<col style="min-width: 140px; width: 8.54%" />
 							<col style="min-width: 160px; width: 9.76%" />
 							<col style="min-width: 160px; width: 9.76%" />
@@ -346,7 +362,30 @@
 							</tr>
 						</tbody>
 					</table>
-
+					<table class="table">
+						<colgroup>
+							<col style="min-width: 120px; width: 7.32%" />
+							<col style="min-width: 140px; width: 8.54%" />
+							<col style="width: auto" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th>위치</th>
+								<th>유형</th>
+								<th>배너명</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>Notice</td>
+								<td class="text-left">
+									홍보 영상WWWWWWWWWWWWWWWWWWWW
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- content footer -->
 					<div class="content__footer">
 						<div class="footer__left"></div>
 						<div class="footer__center">
