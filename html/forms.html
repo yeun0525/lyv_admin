@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+		/>
+		<title>forms</title>
+		<link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+		<script src="../assets/js/jquery-3.7.1.min.js"></script>
+		<script src="../assets/js/design.js"></script>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<h1>input</h1>
+			<div class="tmp__elements">
+				<input type="text" class="forms__text" placeholder="" />
+				<div class="forms__date">
+					<input type="date" value="2026-05-26" />
+					<p>~</p>
+					<input type="date" value="2026-05-26" />
+				</div>
+				<div class="forms__select">
+					<input
+						type="checkbox"
+						id="select-input"
+						class="forms__select--input"
+					/>
+					<label for="select-input" class="forms__select--label">
+						<span>메뉴 구성 선택</span>
+					</label>
+					<div class="forms__select--menu">
+						<div>
+							<button type="button">메뉴 1</button>
+						</div>
+						<div>
+							<button type="button">메뉴 2</button>
+						</div>
+						<div>
+							<button type="button">메뉴 3</button>
+						</div>
+					</div>
+				</div>
+				<div class="forms__file">
+					<input type="text" class="forms__text" placeholder="" />
+					<button type="button" class="button is--white size--s">
+						파일찾기
+					</button>
+				</div>
+			</div>
+			<h1>radio</h1>
+			<div class="tmp__elements">
+				<label for="radTmp1" class="forms__radio">
+					<input type="radio" id="radTmp1" name="radTmp" />
+					<span class="forms__radio--icon"></span>
+					<span class="forms__radio--text">이미지</span>
+				</label>
+			</div>
+			<h1>common</h1>
+			<div class="tmp__elements">
+				<div class="forms__file">
+					<input type="text" class="forms__text" placeholder="" />
+					<button type="button" class="button is--white size--s">
+						파일찾기
+					</button>
+				</div>
+				<div class="forms__file--list">
+					<div class="forms__file--item">
+						<p>Test 공고.pdf</p>
+						<button type="button" class="delete"></button>
+					</div>
+					<div class="forms__file--item">
+						<p>Test 공고.pdf</p>
+						<button type="button" class="delete"></button>
+					</div>
+				</div>
+				<p class="forms__desc">
+					* 이미지 규격: 720x1364px / 5M 이하 / jpg, jpeg, png
+				</p>
+			</div>
+			<div class="tmp__elements">
+				<div class="forms__preview">
+					<div class="forms__preview--img"></div>
+					<button
+						type="button"
+						class="forms__preview--delete"
+					></button>
+				</div>
+				<div class="forms__place">
+					<img src="../assets/image/img/forms-place-1.jpg" alt="" />
+				</div>
+				<div class="forms__url">
+					<p>https://www.lyvsciences.com/products/</p>
+					<input type="text" class="forms__text" placeholder="" />
+				</div>
+				<div class="forms__editor"></div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<style>
+	h1 {
+		width: 100%;
+		margin: 20px 0;
+		background-color: gray;
+		font-size: 36px;
+	}
+</style>

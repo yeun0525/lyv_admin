@@ -20,59 +20,60 @@
 			margin-left: 8px;
 		}
 	}
+}
 
-	.table {
-		thead {
-			tr {
-				height: 54px;
-			}
+.table {
+	thead {
+		tr {
+			height: 54px;
 		}
-		tbody {
-			tr {
-				height: 60px;
-				border-bottom: 1px solid $hexBorder;
-			}
+	}
+	tbody {
+		tr {
+			height: 60px;
+			border-bottom: 1px solid $hexBorder;
 		}
-		th {
-			background-color: $hexGray;
-			color: $hexBlack;
-			font-weight: $fwM;
-			font-size: 16px;
-			line-height: 16px;
+	}
+	th {
+		background-color: $hexGray;
+		color: $hexBlack;
+		font-weight: $fwM;
+		font-size: 16px;
+		line-height: 16px;
+	}
+	td {
+		color: $hexBlack;
+		font-weight: $fwR;
+		font-size: 16px;
+		line-height: 16px;
+		text-align: center;
+	}
+	.text-left {
+		text-align: left;
+	}
+	&__arrow {
+		@include reset(icon);
+		$s: 24px;
+		width: $s;
+		height: $s;
+		border: 1px solid $hexBorder;
+		border-radius: 4px;
+		background-image: url(url-img(icon, table, arrow));
+		&.down {
+			transform: rotate(180deg);
 		}
-		td {
-			color: $hexBlack;
-			font-weight: $fwR;
-			font-size: 16px;
-			line-height: 16px;
-			text-align: center;
-		}
-		.text-left {
-			text-align: left;
-		}
-		&__arrow {
-			@include reset(icon);
-			$s: 24px;
-			width: $s;
-			height: $s;
-			border: 1px solid $hexBorder;
-			border-radius: 4px;
-			background-image: url(url-img(icon, table, arrow));
-			&.down {
-				transform: rotate(180deg);
-			}
-		}
-		// 더블클래스
-		&__flex {
-			@include set-flex($a: center, $j: center);
-			gap: 6px;
-		}
+	}
+	// 더블클래스
+	&__flex {
+		@include set-flex($a: center, $j: center);
+		gap: 6px;
 	}
 }
 
 .pagination {
 	@include set-flex($a: center, $j: center);
 	gap: 4px;
+	white-space: nowrap;
 	.button,
 	.num {
 		$w: 30px;
@@ -228,7 +229,8 @@
 		gap: 8px;
 		position: relative;
 		input {
-			&[type='radio'] {
+			&[type='radio'],
+			&[type='checkbox'] {
 				position: absolute;
 				width: 100%;
 				height: 100%;

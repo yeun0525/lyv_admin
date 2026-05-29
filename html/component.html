@@ -1,0 +1,286 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="content-Type" content="text/html; charset=utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+		/>
+		<title>button</title>
+		<link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+	</head>
+
+	<body>
+		<div class="wrap">
+			<h1>button</h1>
+			<div class="tmp__elements">
+				<button type="button" class="button is--black">등록</button>
+				<button type="button" class="button is--gray">취소</button>
+				<button type="button" class="button is--white size--s">
+					파일찾기
+				</button>
+			</div>
+			<h1>table</h1>
+			<div class="tmp__elements">
+				<table class="table">
+					<colgroup>
+						<col style="min-width: 120px; width: 7.32%" />
+						<col style="width: auto" />
+						<col style="min-width: 140px; width: 8.54%" />
+						<col style="min-width: 160px; width: 9.76%" />
+						<col style="min-width: 160px; width: 9.76%" />
+						<col style="min-width: 160px; width: 9.76%" />
+						<col style="min-width: 140px; width: 8.54%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>노출 순서</th>
+							<th>배너명</th>
+							<th>유형</th>
+							<th>노출 시작일</th>
+							<th>노출 종료일</th>
+							<th>등록일</th>
+							<th>순서 변경</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td class="text-left">홍보 영상</td>
+							<td>영상</td>
+							<td>YYYY.MM.DD</td>
+							<td>YYYY.MM.DD</td>
+							<td>YYYY.MM.DD</td>
+							<td>
+								<div class="table__flex">
+									<button
+										type="button"
+										class="table__arrow"
+									></button>
+									<button
+										type="button"
+										class="table__arrow down"
+									></button>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="table">
+					<colgroup>
+						<col style="min-width: 120px; width: 7.32%" />
+						<col style="min-width: 140px; width: 8.54%" />
+						<col style="width: auto" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th>위치</th>
+							<th>유형</th>
+							<th>배너명</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>Notice</td>
+							<td class="text-left">
+								홍보 영상WWWWWWWWWWWWWWWWWWWW
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h1>pagination</h1>
+			<div class="tmp__elements">
+				<div class="pagination">
+					<button type="button" class="button is--first">처음</button>
+					<button type="button" class="button is--prev">이전</button>
+					<div class="pagination__pages">
+						<button type="button" class="num active">1</button>
+						<button type="button" class="num">2</button>
+						<button type="button" class="num">3</button>
+						<button type="button" class="num">4</button>
+						<button type="button" class="num">5</button>
+						<button type="button" class="num">6</button>
+						<button type="button" class="num">7</button>
+						<button type="button" class="num">8</button>
+						<button type="button" class="num">9</button>
+						<button type="button" class="num">10</button>
+					</div>
+					<button type="button" class="button is--next">다음</button>
+					<button type="button" class="button is--last">
+						마지막
+					</button>
+				</div>
+			</div>
+			<h1>popup</h1>
+			<div class="tmp__elements tmp__popup">
+				<div class="popup">
+					<div class="popup__box">
+						<div class="popup__header">
+							<p class="popup__title">배너 상세</p>
+							<button type="button" class="close"></button>
+						</div>
+						<div class="popup__content">
+							<table class="table">
+								<colgroup>
+									<col
+										style="min-width: 140px; width: 14.89%"
+									/>
+									<col
+										style="min-width: 140px; width: 14.89%"
+									/>
+									<col
+										style="min-width: 200px; width: auto"
+									/>
+									<col
+										style="min-width: 160px; width: 17.02%"
+									/>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>선택</th>
+										<th>유형</th>
+										<th>배너명</th>
+										<th>등록일</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="table__flex">
+												<label
+													for="radTmp1"
+													class="forms__radio"
+												>
+													<input
+														type="checkbox"
+														id="radTmp1"
+														name="radTmp"
+													/>
+													<span
+														class="forms__radio--icon"
+													></span>
+												</label>
+											</div>
+										</td>
+										<td>공지</td>
+										<td class="text-left">홍보 영상</td>
+										<td>YYYY.MM.DD</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="popup__footer">
+							<div class="footer__left"></div>
+							<div class="footer__center">
+								<div class="pagination">
+									<button
+										type="button"
+										class="button is--first"
+									>
+										처음
+									</button>
+									<button
+										type="button"
+										class="button is--prev"
+									>
+										이전
+									</button>
+									<div class="pagination__pages">
+										<button
+											type="button"
+											class="num active"
+										>
+											1
+										</button>
+										<button type="button" class="num">
+											2
+										</button>
+										<button type="button" class="num">
+											3
+										</button>
+										<button type="button" class="num">
+											4
+										</button>
+										<button type="button" class="num">
+											5
+										</button>
+										<button type="button" class="num">
+											6
+										</button>
+										<button type="button" class="num">
+											7
+										</button>
+										<button type="button" class="num">
+											8
+										</button>
+										<button type="button" class="num">
+											9
+										</button>
+										<button type="button" class="num">
+											10
+										</button>
+									</div>
+									<button
+										type="button"
+										class="button is--next"
+									>
+										다음
+									</button>
+									<button
+										type="button"
+										class="button is--last"
+									>
+										마지막
+									</button>
+								</div>
+							</div>
+							<div class="footer__right">
+								<button type="button" class="button is--black">
+									등록
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h1>confirm</h1>
+			<div class="tmp__elements tmp__popup">
+				<div class="confirm">
+					<div class="confirm__box">
+						<div class="confirm__content">
+							<p>
+								입력한 값을 저장하지 않고<br />
+								나가시겠습니까?
+							</p>
+						</div>
+						<div class="confirm__footer">
+							<button type="button" class="button is--black">
+								등록
+							</button>
+							<button type="button" class="button is--gray">
+								등록
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+
+<style>
+	h1 {
+		width: 100%;
+		margin: 20px 0;
+		background-color: gray;
+		font-size: 36px;
+	}
+	.tmp__elements.tmp__popup {
+		position: relative;
+		width: 100%;
+		height: 600px;
+	}
+</style>

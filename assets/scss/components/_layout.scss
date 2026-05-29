@@ -1,5 +1,8 @@
 @use '../utils/' as *;
 
+.wrap {
+	position: relative;
+}
 .container {
 	@include set-flex($a: flex-start);
 	@include scroll(x);
